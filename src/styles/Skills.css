@@ -1,0 +1,559 @@
+.skills {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #14142b 0%, #0a0a0a 100%);
+  padding: 100px 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: #64f4ab;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.title-highlight {
+  background: linear-gradient(135deg, #64f4ab, #3b82f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #64f4ab;
+}
+
+.title-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #64f4ab, #3b82f6);
+  border-radius: 10px;
+  margin: 16px auto 0;
+}
+
+.skills-content {
+  position: relative;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.skills-icons-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.skill-icon-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  pointer-events: all;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.skill-icon-item:hover {
+  transform: scale(1.2) !important;
+  z-index: 10;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+}
+
+.skill-icon-item:hover .icon-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--icon-color, #64f4ab);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.icon-percentage {
+  font-size: 0.65rem;
+  color: var(--icon-color, #64f4ab);
+  font-weight: 600;
+}
+
+.icon-name {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ============================================ */
+/* POSISI ICON YANG TELAH DIPERBAIKI - TIDAK ADA YANG BERTUMPUK */
+/* ============================================ */
+
+/* === LAPISAN 1: POJOK-POJOK (4 icon) === */
+.pos-top-left { 
+  top: 2%; 
+  left: 2%; 
+  transform: rotate(-12deg); 
+}
+
+.pos-top-right { 
+  top: 2%; 
+  right: 2%; 
+  transform: rotate(8deg); 
+}
+
+.pos-bottom-left { 
+  bottom: 2%; 
+  left: 2%; 
+  transform: rotate(-8deg); 
+}
+
+.pos-bottom-right { 
+  bottom: 2%; 
+  right: 2%; 
+  transform: rotate(6deg); 
+}
+
+/* === LAPISAN 2: SISI KANAN-KIRI (6 icon) === */
+.pos-mid-left-1 { 
+  top: 15%; 
+  left: 0%; 
+  transform: rotate(-5deg); 
+}
+
+.pos-mid-left-2 { 
+  top: 35%; 
+  left: -1%; 
+  transform: rotate(5deg); 
+}
+
+.pos-mid-left-3 { 
+  top: 55%; 
+  left: 0%; 
+  transform: rotate(-8deg); 
+}
+
+.pos-mid-right-1 { 
+  top: 15%; 
+  right: 0%; 
+  transform: rotate(10deg); 
+}
+
+.pos-mid-right-2 { 
+  top: 35%; 
+  right: -1%; 
+  transform: rotate(-7deg); 
+}
+
+.pos-mid-right-3 { 
+  top: 55%; 
+  right: 0%; 
+  transform: rotate(8deg); 
+}
+
+/* === LAPISAN 3: ATAS-BAWAH (6 icon) === */
+.pos-top-mid-1 { 
+  top: -1%; 
+  left: 22%; 
+  transform: rotate(15deg); 
+}
+
+.pos-top-mid-2 { 
+  top: -1%; 
+  right: 22%; 
+  transform: rotate(-10deg); 
+}
+
+.pos-top-mid-3 { 
+  top: 3%; 
+  left: 50%; 
+  transform: translateX(-50%) rotate(8deg); 
+}
+
+.pos-bottom-mid-1 { 
+  bottom: -1%; 
+  left: 22%; 
+  transform: rotate(-12deg); 
+}
+
+.pos-bottom-mid-2 { 
+  bottom: -1%; 
+  right: 22%; 
+  transform: rotate(10deg); 
+}
+
+.pos-bottom-mid-3 { 
+  bottom: 3%; 
+  left: 50%; 
+  transform: translateX(-50%) rotate(-8deg); 
+}
+
+/* === LAPISAN 4: DALAM (8 icon) - Lebih ke dalam dari lapisan 2 & 3 === */
+.pos-inner-top-left { 
+  top: 12%; 
+  left: 18%; 
+  transform: rotate(-15deg); 
+}
+
+.pos-inner-top-right { 
+  top: 12%; 
+  right: 18%; 
+  transform: rotate(12deg); 
+}
+
+.pos-inner-mid-left { 
+  top: 28%; 
+  left: 10%; 
+  transform: rotate(-6deg); 
+}
+
+.pos-inner-mid-right { 
+  top: 28%; 
+  right: 10%; 
+  transform: rotate(9deg); 
+}
+
+.pos-inner-bottom-left { 
+  bottom: 12%; 
+  left: 18%; 
+  transform: rotate(-10deg); 
+}
+
+.pos-inner-bottom-right { 
+  bottom: 12%; 
+  right: 18%; 
+  transform: rotate(8deg); 
+}
+
+.pos-inner-top-mid { 
+  top: 6%; 
+  left: 38%; 
+  transform: rotate(-20deg); 
+}
+
+.pos-inner-bottom-mid { 
+  bottom: 6%; 
+  left: 38%; 
+  transform: rotate(15deg); 
+}
+
+/* === LAPISAN 5: TENGAH (6 icon) - Lebih dekat ke card === */
+.pos-center-1 { 
+  top: 20%; 
+  left: 28%; 
+  transform: rotate(-8deg); 
+}
+
+.pos-center-2 { 
+  top: 20%; 
+  right: 28%; 
+  transform: rotate(8deg); 
+}
+
+.pos-center-3 { 
+  bottom: 20%; 
+  left: 28%; 
+  transform: rotate(-8deg); 
+}
+
+.pos-center-4 { 
+  bottom: 20%; 
+  right: 28%; 
+  transform: rotate(8deg); 
+}
+
+.pos-center-5 { 
+  top: 42%; 
+  left: 18%; 
+  transform: rotate(-12deg); 
+}
+
+.pos-center-6 { 
+  top: 42%; 
+  right: 18%; 
+  transform: rotate(12deg); 
+}
+
+/* === LAPISAN 6: EKSTRA (4 icon) - Di antara lapisan 1 dan 2 === */
+.pos-extra-1 { 
+  top: 8%; 
+  left: 8%; 
+  transform: rotate(-20deg); 
+}
+
+.pos-extra-2 { 
+  top: 8%; 
+  right: 8%; 
+  transform: rotate(18deg); 
+}
+
+.pos-extra-3 { 
+  bottom: 8%; 
+  left: 8%; 
+  transform: rotate(-15deg); 
+}
+
+.pos-extra-4 { 
+  bottom: 8%; 
+  right: 8%; 
+  transform: rotate(15deg); 
+}
+
+/* === LAPISAN 7: SANGAT DALAM (2 icon) - Paling dekat dengan card === */
+.pos-deep-1 { 
+  top: 32%; 
+  left: 22%; 
+  transform: rotate(-10deg); 
+}
+
+.pos-deep-2 { 
+  top: 32%; 
+  right: 22%; 
+  transform: rotate(10deg); 
+}
+
+/* ============================================ */
+
+.skills-center {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.skills-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px 45px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.skills-card-title {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.skills-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #64f4ab, #3b82f6);
+  border-radius: 10px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.skill-percentage {
+  font-size: 0.85rem;
+  color: #64f4ab;
+  font-weight: 600;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: width 1.5s ease;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px 10px 0 0;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1200px) {
+  .skills-content { min-height: 850px; }
+  
+  .pos-mid-left-1 { left: 1%; }
+  .pos-mid-left-2 { left: 0%; }
+  .pos-mid-left-3 { left: 1%; }
+  .pos-mid-right-1 { right: 1%; }
+  .pos-mid-right-2 { right: 0%; }
+  .pos-mid-right-3 { right: 1%; }
+  .pos-extra-1 { left: 4%; top: 6%; }
+  .pos-extra-2 { right: 4%; top: 6%; }
+  .pos-extra-3 { left: 4%; bottom: 6%; }
+  .pos-extra-4 { right: 4%; bottom: 6%; }
+}
+
+@media (max-width: 992px) {
+  .skills { padding: 80px 30px; }
+  .section-title { font-size: 3rem; }
+  .skills-content { min-height: 700px; }
+  
+  .skill-icon-item .icon-wrapper svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .icon-percentage { font-size: 0.55rem; }
+  .icon-name { font-size: 0.6rem; }
+  .skills-card { padding: 30px 30px; }
+  
+  /* Hide inner layers on tablet - keep only outer ring */
+  .pos-inner-top-left,
+  .pos-inner-top-right,
+  .pos-inner-mid-left,
+  .pos-inner-mid-right,
+  .pos-inner-bottom-left,
+  .pos-inner-bottom-right,
+  .pos-inner-top-mid,
+  .pos-inner-bottom-mid,
+  .pos-center-1,
+  .pos-center-2,
+  .pos-center-3,
+  .pos-center-4,
+  .pos-center-5,
+  .pos-center-6,
+  .pos-deep-1,
+  .pos-deep-2,
+  .pos-extra-1,
+  .pos-extra-2,
+  .pos-extra-3,
+  .pos-extra-4,
+  .pos-top-mid-1,
+  .pos-top-mid-2,
+  .pos-top-mid-3,
+  .pos-bottom-mid-1,
+  .pos-bottom-mid-2,
+  .pos-bottom-mid-3 {
+    display: none;
+  }
+  
+  /* Keep only 8 outer icons */
+  .pos-top-left, .pos-top-right,
+  .pos-mid-left-1, .pos-mid-right-1,
+  .pos-mid-left-2, .pos-mid-right-2,
+  .pos-bottom-left, .pos-bottom-right {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills { padding: 60px 20px; }
+  .section-title { font-size: 2.5rem; }
+  .skills-content { min-height: 550px; }
+  .skills-center { max-width: 100%; padding: 10px; }
+  .skills-card { padding: 25px 20px; }
+  .skills-card-title { font-size: 1.2rem; }
+  .skill-name { font-size: 0.8rem; }
+  .skill-percentage { font-size: 0.75rem; }
+  .skill-bar { height: 8px; }
+  
+  .skill-icon-item .icon-wrapper {
+    padding: 6px 8px;
+  }
+  .skill-icon-item .icon-wrapper svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .icon-name { font-size: 0.5rem; }
+  .icon-percentage { font-size: 0.45rem; }
+  
+  /* Keep only 4 corner icons on mobile */
+  .pos-mid-left-1,
+  .pos-mid-right-1,
+  .pos-mid-left-2,
+  .pos-mid-right-2 {
+    display: none;
+  }
+  
+  .pos-top-left { top: -5%; left: -2%; }
+  .pos-top-right { top: -5%; right: -2%; }
+  .pos-bottom-left { bottom: -5%; left: -2%; }
+  .pos-bottom-right { bottom: -5%; right: -2%; }
+}
+
+@media (max-width: 480px) {
+  .section-title { font-size: 2rem; }
+  .skills-content { min-height: 450px; }
+  .skills-card { padding: 16px 14px; }
+  .skills-list { gap: 12px; }
+  .skill-bar { height: 6px; }
+  
+  .pos-top-left { top: -8%; left: -5%; }
+  .pos-top-right { top: -8%; right: -5%; }
+  .pos-bottom-left { bottom: -8%; left: -5%; }
+  .pos-bottom-right { bottom: -8%; right: -5%; }
+}
